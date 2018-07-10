@@ -2,6 +2,7 @@ package shell;
 
 
 import dataAccess.H2DBController;
+import org.apache.logging.log4j.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -10,10 +11,11 @@ import java.util.Scanner;
 
 public class Main {
     public static Map map = new HashMap<String, Command>();
-
+    static final Logger log = LogManager.getRootLogger();
     public static void main(String[] args)
     {
         H2DBController.Connect();
+        log.trace("H2DB connected.");
         Scanner in = new Scanner(System.in);
         MyParser pars = new MyParser();
 

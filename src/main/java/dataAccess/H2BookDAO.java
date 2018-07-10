@@ -11,7 +11,7 @@ public class H2BookDAO extends BookDAO {
 
         try {
             H2DBController.Inquiry(String.format("INSERT INTO books (title,author_id,year) VALUES ('%s',%s,%s)",book.getTitle(),book.getIdAuthor(),book.getYear()));
-            System.out.println("New book added." + book.getYear());
+            System.out.println("New book added.");
         }
         catch (Exception e)
         {
@@ -24,7 +24,7 @@ public class H2BookDAO extends BookDAO {
         try {
             H2DBController.Inquiry("UPDATE books SET title = \'"+newBook.getTitle()+"\', author_id = "+newBook.getIdAuthor()+", year = \'"+newBook.getYear()+"\' WHERE id = " + newBook.getId() +";");
 
-            System.out.println("Book updated." + newBook.getYear());
+            System.out.println("Book updated.");
         } catch (Exception e) {
             e.printStackTrace();
         }
