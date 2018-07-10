@@ -77,34 +77,4 @@ public class H2DBController {
             System.out.println("Can't create DB: " + e.toString());
         }
     }
-
-    /*public static int GetAuthorsMaxId()
-    {
-        try {
-            ResultSet rs = statement.executeQuery("SELECT * FROM authors ORDER BY ID DESC LIMIT 1");
-            rs.next();
-            if (!rs.next()) {
-                return -1;
-            }
-            return rs.getInt("id");
-        }
-        catch (Exception e)
-        {
-            System.out.println("Can't get Authors Max Id DB: " + e.toString());
-        }
-        return 0;
-    }
-
-    public static int GetBooksMaxId()
-    {
-        try {
-            ResultSet rs = statement.executeQuery("SELECT * FROM books ORDER BY ID DESC LIMIT 1");
-            rs.next();
-            return  rs.getInt("id");
-        } catch (Exception e) {
-            System.out.println("Can't get Books Max Id DB: " + e.toString());
-        }
-        return 0;
-    }*/
-
 }
