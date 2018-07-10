@@ -1,5 +1,7 @@
 package shell;
 
+import services.BookService;
+
 public class CommandAdd extends Command {
 
     @Override
@@ -7,11 +9,11 @@ public class CommandAdd extends Command {
 
         if(args[0].equals("author")) {
 
-
+            BookService.getInstance().addAuthor(args);
         }
-        else if(args[0].equals("book"))
-        {
+        else if(args[0].equals("book")) {
 
+            BookService.getInstance().addBook(args);
         }
     }
 }

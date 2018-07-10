@@ -2,25 +2,17 @@ package dataAccess;
 
 import entity.Author;
 
-public class AuthorDAO {
+import java.util.ArrayList;
 
-    public static void Create(/*param*/){
+abstract public class AuthorDAO {
 
+    public abstract void create(Author author);
 
-    }
+    public abstract void update(Author newAuthor);
 
-    public static void FindByID(String id){
+    public abstract void remove(Author book);
 
+    public abstract ArrayList<Author> getAll();
 
-    }
-
-    public static void Update(Author badAuthor, Author  niceAuthor){
-
-
-    }
-
-    public static void Remove(Author author){
-
-
-    }
+    public abstract Author get(int id);
 }

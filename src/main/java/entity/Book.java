@@ -8,21 +8,35 @@ public class Book {
     @Id
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int id;
+    private int id;
     @Column(name="title")
-    String title;
+    private String title;
     @Column(name="author_id")
-    int idAutor;
+    private int idAuthor;
     @Column(name="year")
-    String year;
+    private String year;
 
-    public Book(int i, String t, int ia, String y)
-        {
+    public Book(int i, String t, int ia, String y) {
             id = i;
             title = t;
-            idAutor = ia;
+            idAuthor = ia;
             year = y;
-        }
+    }
 
+    public int getId() {
+        return id;
+    }
+
+    public int getIdAuthor() {
+        return idAuthor;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getYear() {
+        return year;
+    }
 }
 

@@ -7,11 +7,11 @@ public class Author {
     @Id
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int id;
+    private int id;
     @Column(name="name", length=64)
-    String name;
+    private String name;
     @Column(name="lastname", length=64)
-    String lastName;
+    private String lastName;
 
     public Author(int i, String n, String ln)
     {
@@ -20,5 +20,15 @@ public class Author {
         lastName = ln;
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

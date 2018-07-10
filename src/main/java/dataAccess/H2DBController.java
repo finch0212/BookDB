@@ -1,11 +1,11 @@
-package shell;
+package dataAccess;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class DBController {
+public class H2DBController {
 
     public static Connection connection;
     public static Statement statement;
