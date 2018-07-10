@@ -54,6 +54,7 @@ public class BookService {
     public ArrayList<Book> getBooks() {
 
         return bookDAO.getAll();
+
         //TODO можно дописать DVO
     }
 
